@@ -17,6 +17,6 @@ RUN chmod 775 /bin/systemctl
 RUN sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
-RUN echo 'root:123456' | chpasswd
+RUN echo 'root:110207' | chpasswd
 RUN systemctl start sshd
 CMD [ "/usr/sbin/sshd" , "-D" ]
